@@ -1,5 +1,7 @@
 //STRING DEĞERLERİ (SAYILARI) TOPLAMA İŞLEMİ ÖRNEĞİ 
 
+const { func } = require("prop-types");
+
 var sayi1 = 20;
     sayi2 = 30;
     sayi3 = 40;
@@ -158,18 +160,81 @@ switch (islem){
         console.log("İşlem 3");
         break;
     default:
-        console.log("İşlemlerden Hiçbirisi Değil.")
+        console.log("İşlemlerden Hiçbirisi Değil.");
         break;    
 }
 
-var myArray([2,3,5,9,12,7,25]);
-
-myArray.forEach(i=0; i<myArray.length; i++);
-myArray.forEach(if myArray.[i]==7){
-    console.log ("Booom");
+function selamla(){
+    console.log("Merhaba, Nasılsın ?");
 }
-else{
-    console.log ("7 Sayısı Bulunamadı.");
+selamla();
+//SONUÇ: SELAMLA ÇALIŞIR VE KARŞIMIZA MERHABA, NASILSIN? GELİR.
+
+function millet(isim){
+    console.log("Merhaba " + isim);
+}
+millet("Murat");
+//sonuç selamla çalışır ve karışımızı Merhaba Murat gelir.
+
+function toplama (a,b,c){
+    console.log ("Toplamları : "  + (a+b+c));
+    }
+
+toplama (3,5,9);
+//Sonuç: toplam 17 olur.
+
+function toplama2 (a,b,c){
+    return a+b+c;
+};
+
+var toplam = toplama2 (3,5,9);
+console.log ("Toplamları2 : " + toplam)
+//Sonuç: toplam 17 olur.
+
+var calisan = {
+    isim:"Mustafa Murat",
+    soyisim:"KESKİN",
+    no:12345,
+    diller: ["Php", "Java", "C++"],
+    adres:{
+        cadde:"Kabil",
+        sokak:"1254 Sokak"
+    },
+    isimbilgileri: function(){
+        return "Çalışan İsmi: " + this.isim +" "+ this.soyisim;
+    }
 }
 
+console.log(calisan.isim);
+console.log(calisan.soyisim);
+console.log(calisan.no);
+console.log(calisan.diller);
+console.log(calisan.adres.cadde);
+console.log(calisan.adres.sokak);
+console.log(calisan.isimbilgileri());
 
+
+var calisan2 = new Object();
+calisan2.isim2 = "Mustafa Mehmet"
+calisan2.soyisim2="COSKUN";
+calisan2.isimbilgileri2=function(){
+    return "İsim bilgleri: " + this.isim2 + " " + this.soyisim2
+};
+
+console.log (calisan2.isim2);
+console.log(calisan2.soyisim2);
+console.log(calisan2.isimbilgileri2());
+
+function worker(isim3, soyisim3, numara3){
+    this.isim3= isim3;
+    this.soyisim3=soyisim3;
+    this.numara3=numara3;
+    this.bilgilergöster = function(){
+        return "isim3 : "+ this.isim3+this.soyisim3+this.numara3;
+    }
+}
+
+var worker1 = new worker("Mustafa Murat", "COSKUN", 123456);
+var worker2 = new worker("Mehmet", "KESER", 43484);
+console.log(calısan5.bilgilergöster());
+console.log(calısan6.bilgilergöster());
