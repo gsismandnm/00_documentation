@@ -225,16 +225,16 @@ console.log (calisan2.isim2);
 console.log(calisan2.soyisim2);
 console.log(calisan2.isimbilgileri2());
 
-function worker(isim3, soyisim3, numara3){
-    this.isim3= isim3;
-    this.soyisim3=soyisim3;
-    this.numara3=numara3;
-    this.bilgilergöster = function(){
-        return "isim3 : "+ this.isim3+this.soyisim3+this.numara3;
-    }
+function Worker(isim3, soyisim3, numara3) {
+        this.isim3 = isim3;
+        this.soyisim3 = soyisim3;
+        this.numara3 = numara3;
+        this.bilgileriGoster = function() {
+            return "isim3 : " + this.isim3 + this.soyisim3 + this.numara3;
+    };
 }
 
-var worker1 = new worker("Mustafa Murat", "COSKUN", 123456);
-var worker2 = new worker("Mehmet", "KESER", 43484);
-console.log(calısan5.bilgilergöster());
-console.log(calısan6.bilgilergöster());
+var Worker1 = new Worker("Mustafa Murat", "COSKUN", 123456);
+var Worker2 = new Worker("Mehmet", "KESER", 43484);
+console.log(Worker1.bilgileriGoster());
+console.log(Worker2.bilgileriGoster());
