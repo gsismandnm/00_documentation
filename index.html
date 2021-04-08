@@ -7,8 +7,78 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <div class="container">
+        <!-- Bir buton oluşturacağız. Ona tıkla diye bir fonksiyon tanımlayacağız. 
+            Daha sonra script kısmında functin ne yapacağını tanımlıyoruz. -->
+        <button onclick="tikla()">Tıkla</button>
+        <!-- İkinci butonu oluşturduk. Buna da tıklandığında üzerindeki yazısını değiştirdik. -->
+        <button onclick="this.innerHTML='İçerik Değişti'">Tıkla İçerik Değişsin</button>
+        <!-- Üçüncü butonu oluşturduk. Bu butona yine bir fonksiyon yükledik. 
+            Tıklandığında butonun tüm özelleklerini göndermiş olucağız. İkinci buton ile aynı işlem-->
+        <button onclick="tikla2(this)">Element Oluşturma</button>
+        <!-- Dördüncü butonu oluşturduk. Bir pragraf yazdık. Butona tıklayınca paragrafın rengini değiştireceğiz. -->
+        <button onclick="renkDegistir()">Renk Değiştir</button>
 
+        <p id="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Provident aliquid quia dolorem quod possimus adipisci dolore x
+             odio quam recusandae, nam accusantium vitae ex ipsum error doloribus 
+             sed quisquam alias sint!</p>
+
+        <!-- Beşinci butonu oluşturduk. Bu butona onmouseover özelliği atayacağız. 
+        Daha sonra onmouseout olduğunda da yeni bir işlem tanımyalacağız. -->
+        <button onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse Hareketleri</button>
+
+
+    </div>
+    <br><br><br>
+
+    <div>
+        <!-- Bir form oluşturduk. Text alanı yazmak için. Birde buton oluşturduk. gonder.php ismindeki
+        bir dosyayı göndermeyi deneyeceğiz. Ancak böyle bir dosya olmadığı için onsubmit yazdık.
+        şayet sayfası bulursa true olacak değilse false yazacak.-->
+        <form name = "form1" action="gonder.php" method="POST" onsubmit="return dogrula()">
+        <input type="text" name="isim">
+
+        <button type="submit">Gönder</button>
+        </form>
+
+    </div>
+    <script>
+    function tikla(){
+        alert("Butona tıklandı...")
+    };
+
+    // Bir fonksiyon yazacağız burada tıklandığında buton yazımızı değiştireceğiz.
+    function tikla2(element){
+        element.innerHTML = "Butona Tıklandı ve İçeriği Değiştirildi"
+    };
+
+    function renkDegistir (){
+        var element = document.getElementById("para1");
+        element.style.color="red";
+    };
+
+    function mouseOver (){
+        var element = document.getElementById("para1");
+        element.innerHTML = "Mouse Over Sonrası paragraf değişti."; 
+    };
+
+    function mouseOut (){
+        var element = document.getElementById("para1");
+        element.innerHTML = "Mouse butondan uzaklaştırıldı.";
+    };
+
+    function dogrula (){
+        var form = document.forms["form1"];
+        var deger = form["isim"].value;
+
+        if (deger == ""){
+            alert("isim alanı boş bırakılamaz...")
+            return false;
+            
+        }
+        return true;
+    };
 
     </script>
 </body>

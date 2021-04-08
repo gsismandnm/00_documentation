@@ -170,72 +170,72 @@ function selamla(){
 selamla();
 //SONUÇ: SELAMLA ÇALIŞIR VE KARŞIMIZA MERHABA, NASILSIN? GELİR.
 
-// function millet(isim){
-//     console.log("Merhaba " + isim);
-// }
-// millet("Murat");
+function millet(isim){
+     console.log("Merhaba " + isim);
+}
+millet("Murat");
 //sonuç selamla çalışır ve karışımızı Merhaba Murat gelir.
 
-// function toplama (a,b,c){
-//     console.log ("Toplamları : "  + (a+b+c));
-//     }
+function toplama (a,b,c){
+    console.log ("Toplamları : "  + (a+b+c));
+}
 
-// toplama (3,5,9);
-// //Sonuç: toplam 17 olur.
+toplama (3,5,9);
+//Sonuç: toplam 17 olur.
 
-// function toplama2 (a,b,c){
-//     return a+b+c;
-// }
+function toplama2 (a,b,c){
+   return a+b+c;
+}
 
-// var toplam = toplama2 (3,5,9);
-// console.log ("Toplamları2 : " + toplam)
-// //Sonuç: toplam 17 olur.
+var toplam = toplama2 (3,5,9);
+console.log ("Toplamları2 : " + toplam)
+//Sonuç: toplam 17 olur.
 
-// var calisan = {
-//     isim:"Mustafa Murat",
-//     soyisim:"KESKİN",
-//     no:12345,
-//     diller: ["Php", "Java", "C++"],
-//     adres:{
-//         cadde:"Kabil",
-//         sokak:"1254 Sokak"
-//     },
-//     isimbilgileri: function(){
-//         return "Çalışan İsmi: " + this.isim +" "+ this.soyisim;
-//     }
-// }
+var calisan = {
+   isim:"Mustafa Murat",
+    soyisim:"KESKİN",
+    no:12345,
+    diller: ["Php", "Java", "C++"],
+    adres:{
+        cadde:"Kabil",
+         sokak:"1254 Sokak"
+    },
+    isimbilgileri: function(){
+                return "Çalışan İsmi: " + this.isim +" "+ this.soyisim;
+    }
+}
 
-// console.log(calisan.isim);
-// console.log(calisan.soyisim);
-// console.log(calisan.no);
-// console.log(calisan.diller);
-// console.log(calisan.adres.cadde);
-// console.log(calisan.adres.sokak);
-// console.log(calisan.isimbilgileri());
+console.log(calisan.isim);
+console.log(calisan.soyisim);
+console.log(calisan.no);
+console.log(calisan.diller);
+console.log(calisan.adres.cadde);
+console.log(calisan.adres.sokak);
+console.log(calisan.isimbilgileri());
 
 
-// var calisan2 = new Object();
-// calisan2.isim2 = "Mustafa Mehmet"
-// calisan2.soyisim2="COSKUN";
-// calisan2.isimbilgileri2=function(){
-//     return "İsim bilgleri: " + this.isim2 + " " + this.soyisim2
-// }
+var calisan2 = new Object();
+    calisan2.isim2 = "Mustafa Mehmet"
+    calisan2.soyisim2="COSKUN";
+    calisan2.isimbilgileri2=function(){
+    return "İsim bilgleri: " + this.isim2 + " " + this.soyisim2
+}
 
-// console.log (calisan2.isim2);
-// console.log(calisan2.soyisim2);
-// console.log(calisan2.isimbilgileri2());
+console.log (calisan2.isim2);
+console.log(calisan2.soyisim2);
+console.log(calisan2.isimbilgileri2());
 
-// function Worker(isim3, soyisim3, numara3) {
-//         this.isim3 = isim3;
-//         this.soyisim3 = soyisim3;
-//         this.numara3 = numara3;
-//         this.bilgileriGoster = function() {
-//             return "isim3 : " + this.isim3 + this.soyisim3 + this.numara3;
-//     };
-// }
+function Worker(isim3, soyisim3, numara3) {
+    this.isim3 = isim3;
+    this.soyisim3 = soyisim3;
+    this.numara3 = numara3;
+    this.bilgileriGoster = function() {
+          return "isim3 : " + this.isim3 + this.soyisim3 + this.numara3;
+    };
+}
 
-// var Worker1 = new Worker("Mustafa Murat", "COSKUN", 123456);
-// var Worker2 = new Worker("Mehmet", "KESER", 43484);
-// console.log(Worker1.bilgileriGoster());
-// console.log(Worker2.bilgileriGoster());
+var Worker1 = new Worker("Mustafa Murat", "COSKUN", 123456);
+var Worker2 = new Worker("Mehmet", "KESER", 43484);
+console.log(Worker1.bilgileriGoster());
+console.log(Worker2.bilgileriGoster());
 
